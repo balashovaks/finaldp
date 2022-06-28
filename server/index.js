@@ -8,6 +8,7 @@ const fileUpload = require('express-fileupload')
 const router = require('./routes/index')
 const errorHandler = require('./middleware/ErrorHandlingMiddleware')
 const path = require('path')
+const { CART_ROUTE } = require('../client/src/utils/consts')
 
 const PORT = process.env.PORT || 5000
 

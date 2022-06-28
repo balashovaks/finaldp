@@ -18,7 +18,7 @@ const BasketItems = sequelize.define('basket_items', {
 
 const Item = sequelize.define('item', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
+    name: {type: DataTypes.STRING, unique: false},
     img: {type: DataTypes.STRING, allowNull: false},
     color: {type: DataTypes.STRING, allowNull: false},
     size: {type: DataTypes.STRING, allowNull: false},
@@ -28,7 +28,7 @@ const Item = sequelize.define('item', {
 
 const Type = sequelize.define('type', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
+    name: {type: DataTypes.STRING, unique: true, allowNull: true},
 })
 
 User.hasOne(Basket)
